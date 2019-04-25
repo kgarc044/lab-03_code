@@ -1,3 +1,7 @@
+#include <string>
+#include "base.h"
+using namespace std;
+
 class Div : public Base{
 private:
 Base* left;
