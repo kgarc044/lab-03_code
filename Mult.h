@@ -7,18 +7,18 @@ using namespace std;
 class Mult : public Base{
 
 private:
-        Base* left;
-        Base* right;
+        double left;
+        double right;
 public:
-        Mult(Base* test1,Base* test2) {
+        Mult(double  test1,double test2) {
         left = test1;
 	right = test2;
         }
-        double evaluate() {
-	return (left->evaluate() * right->evaluate());
+        virtual double evaluate() {
+	return (left * right);
 	}
-        string stringify() {
-	return left->stringify() + "*" + right->stringify();
+        virtual string stringify() {
+	return (to_string(left + "*" + right));
 	}
 };
 #endif
