@@ -1,6 +1,6 @@
 #ifndef OP_H_
 #define OP_H_
-#include "base.cpp"
+#include "base.h"
 #include <string>
 
 using namespace std;
@@ -16,7 +16,7 @@ public:
                 value = newNum;
 }
 virtual double evaluate(){
-return->value;
+return value;
 }
 virtual string stringify(){
 return to_string(value);
