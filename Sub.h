@@ -7,20 +7,21 @@ using namespace std;
 class Sub : public Base{
 
 private:
-        double left;
-        double right;
+        Base* left;
+        Base* right;
 public:
-        Sub(double  test1,double test2) {
+        Sub(Base*  test1,Base* test2) {
         left = test1;
         right = test2;
         }
-        virtual double evaluate() {
-        return (left - right);
+        double evaluate() {
+        return (left->evaluate() - right->evaluate());
         }
-        virtual string stringify() {
-        return (to_string(left + "-" + right));
+         string stringify() {
+        return (left->stringify() + "-" + right->stringify());
         }
-};
+
+    };
 
 #endif
 

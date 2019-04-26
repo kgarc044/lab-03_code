@@ -1,21 +1,18 @@
-#ifndef OP_H_
-#define OP_H_
+
 #include "base.h"
 #include <string>
 
 using namespace std;
 
-class Op : public Base{
+class RandMock : public Base{
 private:
-     double value  =0;
+        double value = 0;
 public:
-	
-        Op(){
-        value = 21;
+        RandMock(){
+        srand(69);
+        value = rand()%100;
 }
-	Op(double newNum) {
-	   value = newNum;
-}
+
 
 virtual double evaluate(){
 return value;
@@ -23,5 +20,5 @@ return value;
 virtual string stringify(){
 return to_string(value);
 }
-};    
-#endif
+};
+

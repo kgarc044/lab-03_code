@@ -8,19 +8,19 @@ using namespace std;
 class Pow : public Base{
 
 private:
-        double left;
-        double right;
+        Base* left;
+        Base* right;
 public:
-        Pow(double  test1,double test2) {
+        Pow(Base*  test1,Base* test2) {
         left = test1;
         right = test2;
         }
-        virtual double evaluate() {
-        return (pow(left, right));
-        }
-        virtual string stringify() {
-        return (to_string(left + "^" + right));
-        }
+         double evaluate() {
+ 	return (pow(left->evaluate(),right->evaluate()));
+ 	}
+         string stringify() {
+ 	return left->stringify() + "^" + right->stringify();
+ 	}
 };
 
 #endif

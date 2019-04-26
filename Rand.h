@@ -10,6 +10,7 @@ private:
         double value = 0;
 public:
         Rand(){
+	srand(69);
         value = rand()%100;
 }
 
@@ -20,5 +21,5 @@ return value;
 virtual string stringify(){
 return to_string(value);
 }
-
+};
 #endif

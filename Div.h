@@ -4,19 +4,19 @@ using namespace std;
 
 class Div : public Base{
 private:
-        double left;
-        double right;
+        Base* left;
+        Base* right;
 public:
-        Div(double  test1,double test2) {
+        Div(Base*  test1,Base* test2) {
         left = test1;
         right = test2;
         }
-        virtual double evaluate() {
-        return (left / right);
-        }
-        virtual string stringify() {
-        return (to_string(left + "/" + right));
-        }
+         double evaluate() {
+ 	return (left->evaluate() / right->evaluate());
+ 	}
+         string stringify() {
+ 	return left->stringify() + "/" + right->stringify();
+ 	}
 };
 
 
