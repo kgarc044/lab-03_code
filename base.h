@@ -1,7 +1,6 @@
-#ifndef __BASE_HPP__
-#define __BASE_HPP__
-
 #include <string>
+#ifndef BASE_H_
+#define BASE_H_
 
 class Base {
     public:
@@ -13,4 +12,4 @@ class Base {
         virtual std::string stringify() = 0;
 };
 
-#endif //__BASE_HPP__
+#endif
